@@ -1,0 +1,33 @@
+# Path to refer config modules
+filebeat.config.modules:
+  path: ${path.config}/modules.d/*.yml
+  reload.enabled: false
+
+setup.template:
+  name: "nginx"
+  fields: "fields.yml"
+  pattern: "nginx-*"
+
+fields_under_root: true
+fields:
+  log_type: "nginx"
+
+tags:
+  - nginx-logs  
+
+setup.kibana:
+  host: "kibana:5601"
+
+# Output set to elasticsearch
+output.elasticsearch:
+  hosts: ["elasticsearch:9200"]
+  index: "%{[fields.log_type]}-%{[agent.version]}-%{+yyyy.MM.dd}"
+
+# Host and cloud providers metadata  
+processors:
+  - add_host_metadata: ~
+  - add_cloud_metadata: ~
+
+# Load sample dashboards
+setup.dashboards.enabled: true
+
