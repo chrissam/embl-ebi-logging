@@ -24,9 +24,9 @@ output.elasticsearch:
   index: "%{[fields.log_type]}-%{[agent.version]}-%{+yyyy.MM.dd}"
 
 # Host and cloud providers metadata  
-processors:
-  - add_host_metadata: ~
-  - add_cloud_metadata: ~
+# processors:
+#   - add_host_metadata: ~
+#   - add_cloud_metadata: ~
 
 # Load sample dashboards
 setup.dashboards.enabled: true
