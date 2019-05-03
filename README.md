@@ -49,3 +49,13 @@ $ docker exec -it ebi_nginx_1 bash -c "service filebeat status"
 $ docker exec -it ebi_nginx_1 bash -c "service filebeat start"
 ```
 
+## Screenshots
+
+**Nginx Logs**
+![Nginx Logs](images/nginx_logs.png)
+
+**Nginx Logs Overview**
+![Nginx Logs Overview](images/nginx_logs_overview.png)
+
+**Nginx Access and Error overview**
+![Nginx Access and Error](images/nginx_access_error.png)
