@@ -24,7 +24,7 @@ This will pull the relevant docker images if not present locally and start those
 
 ## Access the App and Kibana 
 - You can hit the app served by nginx instance using port 8080 ( http://localhost:8080 )
-- You can access Kibana dashboard using port 5061 ( http://localhost:5601 )
+- You can access Kibana dashboard using port 5601 ( http://localhost:5601 )
 
 ## Stop the Demo
 You can stop the demo by running
